@@ -20,6 +20,7 @@ async function fetchData(endpoint, group) {
     console.group(group);
     console.log(response.data);
     console.groupEnd();
+    return response.data;
   } catch (error) {
     console.error("Error: ", error.message);
     throw error;
@@ -27,10 +28,17 @@ async function fetchData(endpoint, group) {
 }
 
 async function fetchUser(username) {
-  const res = fetchData(`GET /users/${username}`, "USER");
-  const obj = res.data;
-
-  console.log(obj);
+  const res = await fetchData(`GET /users/${username}`, "USER");
+  const userPicUrl = res.avatar_url;
+  const userInfo = {
+    name: res.name,
+    bio: res.bio,
+    company: res.company,
+    followers: res.followers,
+    location: res.location,
+    page: res.html_url,
+  };
+  console.log(userInfo);
 }
 
 async function fetchEvents(username) {
