@@ -32,7 +32,6 @@ async function fetchUser(username) {
   const userPicUrl = res.avatar_url;
   const userInfo = {
     name: res.name,
-    bio: res.bio,
     company: res.company,
     followers: res.followers,
     location: res.location,
