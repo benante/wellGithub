@@ -22,11 +22,15 @@ async function fetchData(endpoint, group) {
     console.groupEnd();
   } catch (error) {
     console.error("Error: ", error.message);
+    throw error;
   }
 }
 
 async function fetchUser(username) {
-  return fetchData(`GET /users/${username}`, "USER");
+  const res = fetchData(`GET /users/${username}`, "USER");
+  const obj = res.data;
+
+  console.log(obj);
 }
 
 async function fetchEvents(username) {
