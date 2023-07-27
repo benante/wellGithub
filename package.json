@@ -6,10 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "author": "Tommaso Orlandi",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.45.0",
     "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "@octokit/core": "^5.0.0"
   }
 }
