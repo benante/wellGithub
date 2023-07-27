@@ -29,8 +29,8 @@ async function fetchData(endpoint, group) {
 
 async function fetchUser(username) {
   const res = await fetchData(`GET /users/${username}`, "USER");
-  const userPicUrl = res.avatar_url;
   const userInfo = {
+    userPicUrl: res.avatar_url,
     name: res.name,
     company: res.company,
     followers: res.followers,
@@ -41,7 +41,8 @@ async function fetchUser(username) {
 }
 
 async function fetchEvents(username) {
-  fetchData(`GET /users/${username}/events/public`, "EVENTS");
+  const res = await fetchData(`GET /users/${username}/events/public`, "EVENTS");
+  console.log(typeof res);
 }
 
 async function fetchRepos(username) {
