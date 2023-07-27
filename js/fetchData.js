@@ -42,11 +42,19 @@ async function fetchUser(username) {
 }
 
 async function fetchEvents(username) {
-  return fetchData(`GET /users/${username}/events/public`, "EVENTS");
+  fetchData(`GET /users/${username}/events/public`, "EVENTS");
 }
 
 async function fetchRepos(username) {
-  return fetchData(`GET /users/${username}/repos`, "REPOS");
+  //  get only 6 repos ordered by last update
+  const queryParameter = `?sort=updated&order=desc`;
+  const res = await fetchData(
+    `GET /users/${username}/repos${queryParameter}`,
+    "REPOS",
+  );
+  const reducedArray = res.slice(0, 6);
+  console.log(reducedArray);
+  return reducedArray;
 }
 
 async function fetchStarredRepo(username) {
