@@ -1,8 +1,8 @@
 import { Octokit } from "https://esm.sh/octokit";
-import { config } from "./config.js";
+import { personalToken } from "./config.js";
 
 // NEED TO BE ADD INTO .ENV
-const personalToken = config.personalToken;
+
 // Pass personal token to Octokit instance
 const octokit = new Octokit({
   auth: personalToken,
