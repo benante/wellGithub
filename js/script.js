@@ -5,8 +5,6 @@ import {
   fetchStarredRepo,
 } from "./fetchData.js";
 
-let tempUser = "benante";
-
 document.addEventListener("submit", async (event) => {
   event.preventDefault();
   const user = document.querySelector("input").value;
