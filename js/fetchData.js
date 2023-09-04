@@ -1,6 +1,10 @@
 import { Octokit } from "https://esm.sh/octokit";
-import { personalToken } from "./config.js";
+// import { personalToken } from "./config.js";
+import { dotenv } from "dotenv";
+dotenv.config({ path: "./.env" });
 
+// Access the token using process.env.PERSONAL_TOKEN
+const personalToken = process.env.PERSONAL_TOKEN;
 // NEED TO BE ADD INTO .ENV
 
 // Pass personal token to Octokit instance
