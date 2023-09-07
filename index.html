@@ -3,29 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/styles.css" />
     <title>Well Github</title>
   </head>
   <body>
-    <header>
+    <header class="flex">
       <h1>Fishing for GitHub Brilliance</h1>
-    </header>
-    <img src="static/icons/github-sign(David Gandy).png" alt="Github logo" />
-    <img
-      src="static/icons/search-user(Saepul Nahwan).png"
-      alt="search user icon"
-    />
-    <form action="" method="">
-      <label for="userName">Insert user name</label>
-      <input
-        type="text"
-        name="userName"
-        id="userName"
-        class="input"
-        value="benante"
+      <img
+        class="logo-sm"
+        src="static/icons/github-sign(David Gandy).png"
+        alt="Github logo"
       />
-      <button type="submit" class="btn">Submit</button>
-    </form>
-    <div class="result"></div>
+    </header>
+    <main>
+      <div class="search flex">
+        <img
+          class="logo-m"
+          src="static/icons/search-user(Saepul Nahwan).png"
+          alt="search user icon"
+        />
+        <form class="search flex" action="" method="">
+          <label for="userName">Insert user name</label>
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            class="input"
+            value="benante"
+          />
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+      <div class="result"></div>
+    </main>
+    <footer>credits</footer>
     <script src="js/script.js" type="module"></script>
   </body>
 </html>
