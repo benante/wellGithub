@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: 5em 1fr 5em;
-  margin: 0 auto;
+  margin: 0;
   background-color: #f6f8fa;
 }
 
@@ -35,12 +35,17 @@ h1 {
 header,
 footer {
   align-items: center;
+  justify-content: center;
 }
-footer {
+footer,
+button {
   background-color: black;
   color: white;
 }
 main {
   display: grid;
   align-items: center;
+}
+header {
+  gap: 1em;
 }
