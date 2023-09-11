@@ -7,13 +7,15 @@
     <title>Well Github</title>
   </head>
   <body>
-    <header class="flex">
-      <h1>Fishing for GitHub Brilliance</h1>
-      <img
-        class="logo-sm"
-        src="static/icons/github-sign(David Gandy).png"
-        alt="Github logo"
-      />
+    <header>
+      <div class="nav flex">
+        <h1>Fishing for GitHub Brilliance</h1>
+        <img
+          class="logo-sm"
+          src="static/icons/github-sign(David Gandy).png"
+          alt="Github logo"
+        />
+      </div>
     </header>
     <main>
       <div class="search flex">
@@ -33,6 +35,15 @@
           />
           <button type="submit" class="btn">Submit</button>
         </form>
+      </div>
+      <div class="loading-div">
+        <div class="loadContainer flex">
+          <img
+            src="static/icons/daftpunktocat-thomas.gif"
+            alt="Octocat in Daft Punk style"
+          />
+          <div class="loader"></div>
+        </div>
       </div>
       <div class="result"></div>
     </main>
