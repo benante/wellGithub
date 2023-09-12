@@ -54,8 +54,8 @@ header {
   gap: 1em;
 }
 
-.loading {
-  display: block;
+.loadingDiv {
+  display: none;
   text-align: center;
 }
 .loader {

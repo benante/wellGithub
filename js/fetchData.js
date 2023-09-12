@@ -43,6 +43,7 @@ async function fetchUser(username) {
     page: res.html_url,
   };
   console.log(userInfo);
+  return userInfo;
 }
 
 async function fetchEvents(username) {
