@@ -5,12 +5,18 @@ import {
   fetchStarredRepo,
 } from "./fetchData.js";
 import { iterateObject } from "./displayData.js";
+import { loadingEffect, toggleVisibility } from "./loadingEffect.js";
 
 const resultDiv = document.querySelector(".result");
-console.log(resultDiv);
+const loadingDiv = document.querySelector(".loadingDiv");
+const searchDiv = document.querySelector(".search");
+
+console.log(loadingDiv);
 
 document.addEventListener("submit", async (event) => {
   event.preventDefault();
+  toggleVisibility(searchDiv);
+  loadingEffect(loadingDiv);
   const user = document.querySelector("input").value;
   try {
     let userInfo = await fetchUser(user);
