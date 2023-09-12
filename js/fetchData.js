@@ -40,9 +40,9 @@ async function fetchUser(username) {
     company: res.company,
     followers: res.followers,
     location: res.location,
-    page: res.html_url,
+    webpage: res.html_url,
   };
-  console.log(userInfo);
+  console.log("userInfo:" + userInfo);
   return userInfo;
 }
 
